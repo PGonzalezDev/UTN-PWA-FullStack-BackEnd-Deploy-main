@@ -21,7 +21,7 @@ export const registerUserController = async (req, res) => {
             return res.status(400).json(response)
         }
 
-        const userExists = await User.findOne({ email: email })
+        const userExists = await UserRepository.getByEmail(email)
 
         if (userExists) {
             const response = new ResponseBuilder()

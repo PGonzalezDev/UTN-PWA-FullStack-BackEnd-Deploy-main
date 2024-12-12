@@ -2,6 +2,8 @@ import dotenv from "dotenv";
 
 dotenv.config()
 
+console.log(process.env.API_KEY_INTERN)
+
 const ENVIROMENT = {
     PORT: process.env.PORT || 3000,
     DB_URL: process.env.DB_URL,
